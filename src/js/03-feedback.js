@@ -7,16 +7,18 @@ let elements = {
       message: message.value}
   ;
 
-if (JSON.parse(localStorage.getItem('feedback-form-state')).email != null) {
+if (localStorage.getItem('feedback-form-state') != null)  {
   
   email.value = JSON.parse(localStorage.getItem('feedback-form-state')).email;
   
 }
-if (JSON.parse(localStorage.getItem('feedback-form-state')).message != null) {
+if (localStorage.getItem('feedback-form-state') != null)  {
   
   message.value = JSON.parse(localStorage.getItem('feedback-form-state')).message;
   
 }
+
+console.log(localStorage.getItem('feedback-form-state'))
 
 function saveStorage()  {
   
